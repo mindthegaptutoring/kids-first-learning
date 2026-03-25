@@ -124,50 +124,12 @@
 
       <div class="contact-grid">
 
-        <!-- LEFT: FORM -->
+        <!-- LEFT: CONTACT -->
         <div>
-          <h2 style="font-size:1.1rem; margin-bottom:1.25rem;">Send a message</h2>
-          <form id="contact-form">
-            <div class="form-group">
-              <label class="form-label" for="form-name">Your name</label>
-              <input class="form-input" type="text" id="form-name" required placeholder="e.g. Sarah">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-email">Email address</label>
-              <input class="form-input" type="email" id="form-email" required placeholder="you@example.com">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-child">A little about your child <span style="font-weight:400; color:var(--muted);">(optional but helpful)</span></label>
-              <input class="form-input" type="text" id="form-child" placeholder="e.g. Grade 2, struggles with sounding out words">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="form-message">Message</label>
-              <textarea class="form-input" id="form-message" required placeholder="What are you hoping for? Any questions?"></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Send Message</button>
-            <p style="font-size:0.78rem; color:var(--muted); margin-top:0.75rem;">
-              This opens your email client. To connect a form backend, replace with
-              <a href="https://formspree.io" target="_blank" rel="noopener" style="color:var(--navy);">Formspree</a>.
-            </p>
-          </form>
-
-          <script>
-            document.getElementById('contact-form').addEventListener('submit', function(e) {
-              e.preventDefault();
-              var name    = document.getElementById('form-name').value;
-              var email   = document.getElementById('form-email').value;
-              var child   = document.getElementById('form-child').value;
-              var message = document.getElementById('form-message').value;
-              var subject = encodeURIComponent('Message from ' + name);
-              var body    = encodeURIComponent(
-                'Name: ' + name + '\n' +
-                'Email: ' + email + '\n' +
-                (child ? 'About my child: ' + child + '\n' : '') +
-                '\n' + message
-              );
-              window.location.href = 'mailto:kidsfirstlearningabc@gmail.com?subject=' + subject + '&body=' + body;
-            });
-          </script>
+          <h2 style="font-size:1.1rem; margin-bottom:1rem;">Get in touch</h2>
+          <p style="font-size:0.95rem; color:var(--muted); line-height:1.75; margin-bottom:1.25rem;">The best way to reach Heather is directly by email. She'll get back to you as soon as possible to answer questions or help you find the right next step.</p>
+          <a href="mailto:kidsfirstlearningabc@gmail.com" class="btn-primary" style="display:inline-block; margin-bottom:1.5rem;">Email Heather</a>
+          <p style="font-size:0.88rem; color:var(--muted); margin-top:0.5rem;">Or copy the address: <strong style="color:var(--text);">kidsfirstlearningabc@gmail.com</strong></p>
         </div>
 
         <!-- RIGHT: INFO -->
@@ -183,7 +145,7 @@
 
           <div class="info-card">
             <h3>Email</h3>
-            <a href="/cdn-cgi/l/email-protection#5a31333e293c3328292e363f3b283433343d3b38391a3d373b333674393537"><span class="__cf_email__" data-cfemail="305b59544356594243445c5551425e595e5751525370575d51595c1e535f5d">[email&#160;protected]</span></a>
+            <a href="mailto:kidsfirstlearningabc@gmail.com" style="color:var(--navy);">kidsfirstlearningabc@gmail.com</a>
           </div>
 
           <div class="info-card">
