@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Kids First Learning</title>
+  <meta name="description" content="Get in touch with Heather Adkins to book a reading tutoring session or ask a question. Online, flexible scheduling, no contracts.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0A1274; --navy-dark: #070d57; --gold: #F0C040; --amber: #D4882A;
+      --text: #1a1a2e; --muted: #6b6b8a; --border: #e2e2ee; --off-white: #f8f8fc; --white: #ffffff; --radius: 10px;
+      --font-heading: "Poppins", sans-serif; --font-body: "Inter", sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; color: var(--text); }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+
+    .btn-primary { display: inline-block; background: var(--navy); color: #fff; padding: 0.8rem 1.6rem; border-radius: 6px; font-weight: 700; font-family: var(--font-body); font-size: 0.95rem; transition: background 0.2s; border: none; cursor: pointer; }
+    .btn-primary:hover { background: var(--navy-dark); }
+    .btn-secondary { display: inline-block; border: 2px solid var(--navy); color: var(--navy); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; font-family: var(--font-body); font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .nav-logo-text { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 1.5rem; }
+    nav ul a { font-size: 0.88rem; font-weight: 600; color: var(--text); transition: color 0.2s; }
+    nav ul a:hover { color: var(--navy); }
+
+    .section { padding: 3.5rem 0; }
+
+    /* Contact layout */
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin-top: 2rem; }
+
+    /* Form */
+    .form-group { margin-bottom: 1.1rem; }
+    .form-label { display: block; font-size: 0.83rem; font-weight: 700; color: var(--text); margin-bottom: 0.35rem; }
+    .form-input {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1.5px solid var(--border);
+      border-radius: 6px;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+    }
+    .form-input:focus { outline: none; border-color: var(--navy); }
+    textarea.form-input { resize: vertical; min-height: 130px; }
+
+    /* Info cards */
+    .info-card { background: var(--off-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1rem; }
+    .info-card h3 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--amber); margin-bottom: 0.6rem; }
+    .info-card p, .info-card a { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+    .info-card a { color: var(--navy); font-weight: 600; }
+    .info-card a:hover { text-decoration: underline; }
+
+    /* Educator summary */
+    .educator-summary { display: flex; align-items: center; gap: 0.875rem; margin-bottom: 1.25rem; }
+    .educator-avatar { width: 56px; height: 56px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(10,18,116,0.1); }
+    .educator-name { font-weight: 700; font-size: 0.95rem; display: block; }
+    .educator-cred { font-size: 0.78rem; color: var(--muted); display: block; line-height: 1.5; }
+
+    /* Payment pills */
+    .payment-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .payment-pill { padding: 0.2rem 0.6rem; border-radius: 999px; font-size: 0.75rem; font-weight: 700; background: rgba(10,18,116,0.06); color: var(--navy); border: 1px solid rgba(10,18,116,0.12); }
+
+    /* Final CTA */
+    .final-cta { text-align: center; padding: 3rem 2rem; border-radius: 14px; background: var(--navy); color: white; margin-top: 3rem; }
+    .final-cta h2 { color: white; margin-bottom: 0.6rem; }
+    .final-cta p  { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+    .btn-white { display: inline-block; background: white; color: var(--navy); padding: 0.85rem 2rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; }
+
+    /* Footer */
+    .site-footer { margin-top: 4rem; padding: 2.5rem 0; background: var(--off-white); border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.65; }
+    .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .footer-col li { margin: 0.4rem 0; }
+    .footer-col a  { font-size: 0.85rem; color: var(--muted); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--navy); }
+    .footer-bottom { padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { nav ul { display: none; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <a href="/" class="nav-logo"><span class="nav-logo-text">Kids First Learning</span></a>
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+        <a href="/contact" class="btn-primary">Book a Session</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+
+      <div style="margin-top:1rem;">
+        <p style="font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber); margin-bottom:0.5rem;">Get in touch</p>
+        <h1 style="font-size:clamp(1.6rem, 3vw, 2.2rem); margin-bottom:0.5rem;">Ready to take the next step?</h1>
+        <p style="color:var(--muted); font-size:0.95rem; max-width:540px;">Whether you want to book a session or just have a question about whether this is the right fit — I'd love to hear from you.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- LEFT: FORM -->
+        <div>
+          <h2 style="font-size:1.1rem; margin-bottom:1.25rem;">Send a message</h2>
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your name</label>
+              <input class="form-input" type="text" id="form-name" required placeholder="e.g. Sarah">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-email">Email address</label>
+              <input class="form-input" type="email" id="form-email" required placeholder="you@example.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-child">A little about your child <span style="font-weight:400; color:var(--muted);">(optional but helpful)</span></label>
+              <input class="form-input" type="text" id="form-child" placeholder="e.g. Grade 2, struggles with sounding out words">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea class="form-input" id="form-message" required placeholder="What are you hoping for? Any questions?"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+            <p style="font-size:0.78rem; color:var(--muted); margin-top:0.75rem;">
+              This opens your email client. To connect a form backend, replace with
+              <a href="https://formspree.io" target="_blank" rel="noopener" style="color:var(--navy);">Formspree</a>.
+            </p>
+          </form>
+
+          <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+              var name    = document.getElementById('form-name').value;
+              var email   = document.getElementById('form-email').value;
+              var child   = document.getElementById('form-child').value;
+              var message = document.getElementById('form-message').value;
+              var subject = encodeURIComponent('Message from ' + name);
+              var body    = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n' +
+                (child ? 'About my child: ' + child + '\n' : '') +
+                '\n' + message
+              );
+              window.location.href = 'mailto:kidsfirstlearningabc@gmail.com?subject=' + subject + '&body=' + body;
+            });
+          </script>
+        </div>
+
+        <!-- RIGHT: INFO -->
+        <div>
+          <div class="educator-summary">
+            <div class="educator-avatar">H</div>
+            <div>
+              <span class="educator-name">Heather Adkins</span>
+              <span class="educator-cred">K–12 Certified · Science of Reading</span>
+              <span class="educator-cred">26 years · Palm Bay, FL · Online worldwide</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Email</h3>
+            <a href="mailto:kidsfirstlearningabc@gmail.com">kidsfirstlearningabc@gmail.com</a>
+          </div>
+
+          <div class="info-card">
+            <h3>Session options</h3>
+            <p>25-minute session — $25<br>55-minute session — $55<br>No contracts. Book as you need.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Payment methods</h3>
+            <div class="payment-pills">
+              <span class="payment-pill">Zelle</span>
+              <span class="payment-pill">Stripe</span>
+              <span class="payment-pill">E-transfer</span>
+              <span class="payment-pill">PayPal</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Good to know</h3>
+            <p>I recommend at least 2 sessions per week for struggling readers — but any frequency works. We'll move at a pace that fits your family.</p>
+          </div>
+
+          <p style="margin-top:1rem;"><a href="/about" class="btn-secondary">Read Heather's full bio →</a></p>
+        </div>
+
+      </div>
+
+      <div class="final-cta">
+        <h2>Not sure where to start?</h2>
+        <p>Send a quick note describing where your child is. I'll let you know whether sessions would help and what that could look like.</p>
+        <a href="mailto:kidsfirstlearningabc@gmail.com" class="btn-white">Email Heather directly</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>Kids First Learning</strong>
+          <p>Online 1-on-1 reading tutoring with Heather Adkins — K–12 certified, Science of Reading trained, 26 years experience. No contracts, flexible scheduling, real progress.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul><li><a href="mailto:kidsfirstlearningabc@gmail.com">kidsfirstlearningabc@gmail.com</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>© 2026 Kids First Learning. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+</body>
+</html>

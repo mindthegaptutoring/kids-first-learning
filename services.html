@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Kids First Learning</title>
+  <meta name="description" content="Online 1-on-1 reading tutoring for K–5 students. Science of Reading instruction. $25 for 25 minutes, $55 for 55 minutes. No contracts.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0A1274; --navy-dark: #070d57; --gold: #F0C040; --teal: #D4882A;
+      --text: #1a1a2e; --muted: #6b6b8a; --border: #e2e2ee; --off-white: #f8f8fc; --white: #ffffff; --radius: 10px;
+      --font-heading: "Poppins", sans-serif; --font-body: "Inter", sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--white); line-height: 1.6; }
+    h1, h2, h3, h4 { font-family: var(--font-heading); line-height: 1.2; color: var(--text); }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; }
+    .btn-primary { display: inline-block; background: var(--navy); color: #fff; padding: 0.8rem 1.6rem; border-radius: 6px; font-weight: 700; font-family: var(--font-body); font-size: 0.95rem; transition: background 0.2s; }
+    .btn-primary:hover { background: var(--navy-dark); }
+    .btn-secondary { display: inline-block; border: 2px solid var(--navy); color: var(--navy); padding: 0.75rem 1.5rem; border-radius: 6px; font-weight: 700; font-family: var(--font-body); font-size: 0.95rem; transition: background 0.2s, color 0.2s; }
+    .btn-secondary:hover { background: var(--navy); color: #fff; }
+    .site-header { position: sticky; top: 0; z-index: 100; background: var(--white); border-bottom: 1px solid var(--border); }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .nav-logo-text { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    nav ul { display: flex; gap: 1.5rem; }
+    nav ul a { font-size: 0.88rem; font-weight: 600; color: var(--text); transition: color 0.2s; }
+    nav ul a:hover { color: var(--navy); }
+    .section { padding: 3.5rem 0; }
+    .section-alt { background: var(--off-white); }
+    .section-header { margin-bottom: 2rem; }
+    .section-header h1, .section-header h2 { margin-bottom: 0.4rem; }
+    .section-header p { color: var(--muted); font-size: 0.95rem; }
+    .card { border-radius: var(--radius); border: 1px solid var(--border); padding: 1.5rem; background: var(--white); }
+    .card h3 { font-size: 0.95rem; margin-bottom: 0.4rem; }
+    .card p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+    /* Service card */
+    .service-card { border-radius: 12px; border: 2px solid var(--navy); padding: 2rem; background: var(--white); }
+    .service-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: var(--teal); padding: 0.2rem 0.6rem; border-radius: 4px; margin-bottom: 0.75rem; }
+    .price-row { display: flex; gap: 1rem; flex-wrap: wrap; margin: 1rem 0; }
+    .price-option { background: var(--off-white); border: 1px solid var(--border); border-radius: 8px; padding: 0.6rem 1rem; text-align: center; }
+    .price-amount { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: var(--navy); }
+    .price-desc   { font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
+
+    /* Steps */
+    .step-number { width: 32px; height: 32px; border-radius: 50%; background: var(--navy); color: white; font-family: var(--font-heading); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; }
+
+    /* Testimonials */
+    .stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 0.05em; margin-bottom: 0.6rem; }
+    .quote { font-size: 0.9rem; color: var(--text); line-height: 1.7; margin-bottom: 0.75rem; }
+    .quote-name { font-weight: 700; font-size: 0.85rem; }
+    .quote-role { font-size: 0.8rem; color: var(--muted); }
+
+    /* Final CTA */
+    .final-cta { text-align: center; padding: 3rem 2rem; border-radius: 14px; background: var(--navy); color: white; }
+    .final-cta h2 { color: white; margin-bottom: 0.6rem; }
+    .final-cta p  { color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; }
+    .final-cta .btn-white { display: inline-block; background: white; color: var(--navy); padding: 0.85rem 2rem; border-radius: 6px; font-weight: 700; font-size: 0.95rem; }
+
+    /* Footer */
+    .site-footer { margin-top: 4rem; padding: 2.5rem 0; background: var(--off-white); border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-brand p { font-size: 0.85rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.65; }
+    .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    .footer-col li { margin: 0.4rem 0; }
+    .footer-col a  { font-size: 0.85rem; color: var(--muted); transition: color 0.2s; }
+    .footer-col a:hover { color: var(--navy); }
+    .footer-bottom { padding-top: 1.5rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); }
+
+    @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr; } .grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } nav ul { display: none; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav>
+        <a href="/" class="nav-logo"><span class="nav-logo-text">Kids First Learning</span></a>
+        <ul>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/testimonials">Testimonials</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+        <a href="/contact" class="btn-primary">Book a Session</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- SERVICES PAGE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="margin-top:1rem;">
+        <h1>Services</h1>
+        <p>One focused offering — built for K–5 students who need real reading instruction.</p>
+      </div>
+
+      <div style="display:flex; gap:2rem; flex-wrap:wrap; align-items:flex-start;">
+        <div class="service-card" style="max-width:460px;">
+          <span class="service-badge">Online · 1-on-1 · K–5</span>
+          <h3 style="font-size:1.3rem; margin-bottom:0.5rem;">Reading Tutoring</h3>
+          <p style="font-size:0.85rem; color:var(--navy); font-weight:600; margin-bottom:0.75rem;">With Heather · Science of Reading trained · 26 years experience</p>
+          <p style="font-size:0.92rem; color:var(--muted); line-height:1.75; margin-bottom:0.75rem;">
+            Step-by-step reading instruction grounded in the Science of Reading — the research-backed approach that teaches kids to decode words accurately, not guess from context or pictures. Every session is built around exactly where your child is.
+          </p>
+          <ul style="list-style:disc; padding-left:1.1rem; color:var(--muted); font-size:0.88rem; margin-bottom:1.25rem;">
+            <li style="margin:0.3rem 0;">Explicit phonics and decoding instruction</li>
+            <li style="margin:0.3rem 0;">Builds fluency and comprehension together</li>
+            <li style="margin:0.3rem 0;">First session is diagnostic — we find the exact gaps</li>
+            <li style="margin:0.3rem 0;">Progress feedback after every session</li>
+            <li style="margin:0.3rem 0;">Works alongside any homeschool curriculum</li>
+            <li style="margin:0.3rem 0;">No contracts — book as you need</li>
+          </ul>
+          <div class="price-row">
+            <div class="price-option">
+              <div class="price-amount">$25</div>
+              <div class="price-desc">25-minute session</div>
+            </div>
+            <div class="price-option">
+              <div class="price-amount">$55</div>
+              <div class="price-desc">55-minute session</div>
+            </div>
+          </div>
+          <p style="margin-top:1.25rem;">
+            <a href="/contact" class="btn-primary">Book a Session</a>
+          </p>
+        </div>
+
+        <div style="flex:1; min-width:240px; display:flex; flex-direction:column; gap:1rem;">
+          <div class="card">
+            <h3 style="font-size:0.85rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.75rem;">Who this is for</h3>
+            <ul style="font-size:0.88rem; color:var(--muted); display:flex; flex-direction:column; gap:0.45rem;">
+              <li>✓ Students in grades K–5</li>
+              <li>✓ Kids guessing at words or avoiding reading</li>
+              <li>✓ Students who've fallen behind in class</li>
+              <li>✓ Beginners who haven't started reading yet</li>
+              <li>✓ Homeschool students needing structured instruction</li>
+              <li>✓ Traveling families who need flexible online access</li>
+            </ul>
+          </div>
+          <div class="card" style="background:rgba(212,136,42,0.04); border-color:rgba(212,136,42,0.2);">
+            <p style="font-size:0.8rem; color:var(--teal); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Science of Reading</p>
+            <p style="font-size:0.84rem; color:var(--muted); line-height:1.65;">
+              A large body of cognitive science research showing how the brain learns to decode language. It emphasizes systematic phonics over memorization and guessing — and it produces measurably better results for struggling readers.
+            </p>
+          </div>
+          <div class="card">
+            <p style="font-size:0.8rem; color:var(--muted); font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:0.4rem;">Still deciding?</p>
+            <p style="font-size:0.84rem; color:var(--muted); line-height:1.65;">
+              Send a message with a quick description of where your child is. I'll let you know whether I think sessions would help and what that would look like.
+            </p>
+            <p style="margin-top:0.75rem;"><a href="/contact" class="btn-secondary" style="font-size:0.85rem; padding:0.55rem 1rem;">Ask a question →</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>What working together looks like</h2>
+        <p>Three steps, no fluff.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="step-number">1</div>
+          <h3>Reach out</h3>
+          <p>Send a message or book directly. Tell me where your child is and what you're hoping for — no lengthy form required.</p>
+        </div>
+        <div class="card">
+          <div class="step-number">2</div>
+          <h3>We identify the gaps</h3>
+          <p>The first session is diagnostic. We find exactly where your student is, what they need, and what a realistic path forward looks like.</p>
+        </div>
+        <div class="card">
+          <div class="step-number">3</div>
+          <h3>Consistent progress</h3>
+          <p>Regular sessions, honest feedback, clear forward movement — until your student reads independently and with confidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>What families are saying</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Reading homework used to be a battle with Emma. After just a few weeks with Heather, she now does her homework independently and even asks to read to her brother. Her confidence has grown so much!"</p>
+          <p class="quote-name">Courtney</p>
+          <p class="quote-role">Mom</p>
+        </div>
+        <div class="card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Ethan would do just about anything to get out of reading. Heather's interactive games and positive encouragement completely changed his attitude. Now he smiles and can't wait for the next session."</p>
+          <p class="quote-name">Mackenzie</p>
+          <p class="quote-role">Parent</p>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem;">
+        <a href="/testimonials" class="btn-secondary">Read all parent stories →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="final-cta">
+        <h2>Ready to get started?</h2>
+        <p>Book a session or reach out with questions. I'm here to help you find the right fit.</p>
+        <a href="/contact" class="btn-white">Book a Session</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>Kids First Learning</strong>
+          <p>Online 1-on-1 reading tutoring for K–5 students, taught by a 26-year specialist trained in the Science of Reading. No contracts, flexible scheduling, real progress.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul><li><a href="/cdn-cgi/l/email-protection#c6adafa2b5a0afb4b5b2aaa3a7b4a8afa8a1a7a4a586a1aba7afaae8a5a9ab"><span class="__cf_email__" data-cfemail="ddb6b4b9aebbb4afaea9b1b8bcafb3b4b3babcbfbe9dbab0bcb4b1f3beb2b0">[email&#160;protected]</span></a></li></ul>
+       
