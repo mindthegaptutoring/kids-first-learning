@@ -48,7 +48,6 @@
     .card p  { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 
-    /* HERO */
     .hero { padding: 3.5rem 0 2.5rem; background: var(--off-white); border-bottom: 1px solid var(--border); }
     .hero-grid { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: start; }
     .hero-eyebrow { display: inline-block; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--teal); background: rgba(212,136,42,0.08); padding: 0.3rem 0.9rem; border-radius: 999px; margin-bottom: 1rem; }
@@ -61,7 +60,6 @@
 
     .hero-panel { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
     .educator-card { display: flex; align-items: center; gap: 0.875rem; }
-    .educator-avatar { width: 62px; height: 62px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(10,18,116,0.12); }
     .educator-name { font-weight: 700; font-size: 0.95rem; display: block; }
     .educator-cred { font-size: 0.78rem; color: var(--muted); display: block; line-height: 1.5; }
     .cred-pills { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -98,7 +96,6 @@
     .faq-a { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 
     .about-strip { display: flex; gap: 2rem; align-items: center; background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
-    .about-avatar-large { width: 96px; height: 96px; border-radius: 50%; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; flex-shrink: 0; box-shadow: 0 0 0 4px rgba(10,18,116,0.1); }
     .about-strip-text h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
     .about-strip-text p { font-size: 0.9rem; color: var(--muted); line-height: 1.75; }
 
@@ -145,7 +142,6 @@
           <li><a href="/testimonials">Testimonials</a></li>
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
-
         </ul>
         <a href="https://cal.com/ms.-heather" target="_blank" rel="noopener noreferrer" class="btn-primary">Book a Session</a>
       </nav>
@@ -177,7 +173,6 @@
         </div>
 
         <aside class="hero-panel">
-          <!-- Replace the avatar div with an <img> tag when Heather's photo is available -->
           <div class="educator-card">
             <img src="Heather.png" alt="Heather Adkins" style="width:62px; height:62px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 3px rgba(10,18,116,0.12); flex-shrink:0;">
             <div>
@@ -394,6 +389,10 @@
           <p class="faq-q">Is the cost worth it?</p>
           <p class="faq-a">Sessions are focused on specific goals — not open-ended. At $25 for 25 minutes, it's one of the more accessible options for this level of experience and training. Most families notice a real shift in confidence within the first few weeks.</p>
         </div>
+        <div class="faq-item">
+          <p class="faq-q">Where can I find Heather's class listings?</p>
+          <p class="faq-a">Heather's full listings are on <a href="https://www.learnwitheveryavenue.com/united-states/palm-bay/tutoring/heather-adkins" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Learn with Every Avenue</a>, a directory connecting independent educators with homeschooling families.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -440,9 +439,18 @@
             <li><a href="/testimonials">Testimonials</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/contact">Contact</a></li>
-  
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <ul><li><a href="mailto:kidsfirstlearningabc@gmail.com" style="color:var(--navy);">kidsfirstlearningabc@gmail.com</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Kids First Learning · Heather Adkins</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
