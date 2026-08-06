@@ -94,6 +94,43 @@
     @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } }
     @media (max-width: 600px) { nav ul { display: none; } }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ContactPage",
+        "url": "https://ea-kids-first-learning.vercel.app/contact",
+        "name": "Contact — Kids First Learning",
+        "mainEntity": {
+          "@type": "LocalBusiness",
+          "@id": "https://ea-kids-first-learning.vercel.app/#organization",
+          "name": "Kids First Learning",
+          "email": "kidsfirstlearningabc@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Palm Bay",
+            "addressRegion": "FL",
+            "addressCountry": "US"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "kidsfirstlearningabc@gmail.com",
+            "contactType": "customer service"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ea-kids-first-learning.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://ea-kids-first-learning.vercel.app/contact" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 

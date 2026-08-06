@@ -67,6 +67,45 @@
     @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr; } .grid-3 { grid-template-columns: 1fr 1fr; } .about-layout { flex-direction: column !important; } }
     @media (max-width: 600px) { .grid-3 { grid-template-columns: 1fr; } nav ul { display: none; } }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://ea-kids-first-learning.vercel.app/#heather-adkins",
+        "name": "Heather Adkins",
+        "url": "https://ea-kids-first-learning.vercel.app/about",
+        "image": "https://ea-kids-first-learning.vercel.app/Heather.png",
+        "jobTitle": "K–12 Certified Reading Specialist",
+        "description": "K–12 certified teacher with a Bachelor's degree and training in the Science of Reading. 26 years of experience across public schools, tutoring settings, online classes, and homeschooling her own children. Specializes in helping struggling readers build skills and confidence through explicit, multi-sensory, 1-on-1 online instruction.",
+        "worksFor": {
+          "@type": "LocalBusiness",
+          "@id": "https://ea-kids-first-learning.vercel.app/#organization",
+          "name": "Kids First Learning"
+        },
+        "email": "kidsfirstlearningabc@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Palm Bay",
+          "addressRegion": "FL",
+          "addressCountry": "US"
+        },
+        "sameAs": [
+          "https://www.learnwitheveryavenue.com/tutoring/kidslearnfirstabc"
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ea-kids-first-learning.vercel.app/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://ea-kids-first-learning.vercel.app/about" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
