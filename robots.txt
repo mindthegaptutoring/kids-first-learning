@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ea-kids-first-learning.vercel.app/sitemap.xml
